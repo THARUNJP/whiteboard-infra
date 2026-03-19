@@ -1,5 +1,11 @@
 global:
   scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+
+# rule_files: add later
+#   - /etc/prometheus/rules/*.yml
+#   - /etc/prometheus/alerts/*.yml
 
 scrape_configs:
   - job_name: "prometheus"
