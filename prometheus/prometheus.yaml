@@ -15,4 +15,4 @@ scrape_configs:
   - job_name: "backend"
     metrics_path: /metrics
     static_configs:
-      - targets: ["localhost:3000"]   # <-- your backend port here
+      - targets: ["localhost:8000"]   # <-- your backend port here
