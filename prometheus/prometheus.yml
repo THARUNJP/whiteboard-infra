@@ -17,6 +17,12 @@ scrape_configs:
     static_configs:
       - targets: [host.docker.internal:8000] # <-- your backend port here
 
-  - job_name: "node"
+  # ❌ remove node exporter (Linux only)
+  # - job_name: "node"
+  #   static_configs:
+  #     - targets: ["node-exporter:9100"]
+
+  # ✅ add windows exporter
+  - job_name: "windows"
     static_configs:
-      - targets: ["node-exporter:9100"]
+      - targets: ["host.docker.internal:9182"]
